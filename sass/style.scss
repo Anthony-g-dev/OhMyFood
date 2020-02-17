@@ -1,0 +1,89 @@
+$primary: #569c87;
+$secondary: #fcca46;
+$colors: ("primary": $primary, "secondary": $secondary);
+
+@each $name, $color in $colors {
+	.color-#{$name} {
+		color: $color;
+	}
+	.bg-#{$name} {
+		background-color: $color;
+	}
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+	max-width: 100%;
+	color: #000000;
+	text-decoration: none;
+	font-family: 'Roboto', 'Arial', sans-serif;
+	font-weight: 400;
+	font-size: 1rem;
+}
+
+html {
+	height: 100%;
+}
+
+header {
+	margin-bottom: 2rem;
+	padding: 1rem;
+	text-align: center;
+}
+
+h1 {
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+footer {
+	margin-top: 2rem;
+	padding: 1rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	color: $secondary;
+	background-color: $primary;
+}
+
+.btn {
+	padding: 0.5rem;
+	color: $secondary;
+	background-color: $primary;
+	border: none;
+	border-radius: 0.5rem;
+}
+
+/* Text-align */
+.align {
+	&-l {
+		text-align: left;
+	}
+	&-c {
+		text-align: center;
+	}
+	&-r {
+		text-align: right;
+	}
+}
+
+#presentation {
+	padding: 0rem 2rem;
+	display: flex;
+	flex-direction: column;
+}
+
+#menu_container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.menu {
+	margin-bottom: 2rem;
+	width: 35vw;
+	height: 34vh;
+	background-color: $primary;
+}
