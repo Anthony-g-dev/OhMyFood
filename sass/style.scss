@@ -34,7 +34,14 @@ header {
 }
 
 h1 {
+	color: $secondary;
 	font-size: 2rem;
+	font-weight: 700;
+}
+
+h2 {
+	color: $secondary;
+	font-size: 1.5rem;
 	font-weight: 700;
 }
 
@@ -69,7 +76,7 @@ footer {
 	}
 }
 
-#presentation {
+#page_container {
 	padding: 0rem 2rem;
 	display: flex;
 	flex-direction: column;
@@ -78,12 +85,18 @@ footer {
 #menu_container {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: center;
 }
 
 .menu {
 	margin-bottom: 2rem;
-	width: 35vw;
-	height: 34vh;
+	margin-left: 1rem;
+	margin-right: 1rem;
+	width: 35%;
+	height: 35vh;
 	background-color: $primary;
+}
+
+#contact ul li {
+	margin-left: 1rem;
 }
