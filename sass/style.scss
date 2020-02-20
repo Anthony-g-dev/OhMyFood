@@ -1,6 +1,6 @@
 $primary: #569c87;
 $secondary: #fcca46;
-$colors: ("primary": $primary, "secondary": $secondary);
+$colors: ("primary": $primary, "secondary": $secondary, "white": #ffffff, "black": #000000);
 
 @each $name, $color in $colors {
 	.color-#{$name} {
@@ -8,6 +8,15 @@ $colors: ("primary": $primary, "secondary": $secondary);
 	}
 	.bg-#{$name} {
 		background-color: $color;
+	}
+}
+
+@keyframes wiggle {
+	from {
+		transform: rotate(-15deg);
+	}
+	to {
+		transform: rotate(15deg);
 	}
 }
 
@@ -55,7 +64,7 @@ footer {
 	position: fixed;
 	bottom: 0px;
 	left: 0px;
-	padding: 1rem;
+	padding: 0.5rem;
 	width: 100%;
 	display: flex;
 	flex-direction: row;
@@ -70,6 +79,12 @@ footer {
 	background-color: $primary;
 	border: none;
 	border-radius: 0.5rem;
+	&-wiggle {
+		background-color: transparent;
+	}
+	&-wiggle:hover {
+		animation: wiggle 750ms ease-in-out infinite alternate;
+	}
 }
 
 /* Text-align */
@@ -105,6 +120,14 @@ footer {
 	height: 35vh;
 	background-color: $primary;
 	box-shadow: 0px 0px 10px black;
+	a {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+	}
 }
 
 #soon {
