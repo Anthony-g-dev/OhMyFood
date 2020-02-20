@@ -74,7 +74,7 @@ footer {
 }
 
 .btn {
-	padding: 0.5rem 1.5rem;
+	padding: 0.5rem 1rem;
 	color: $secondary;
 	background-color: $primary;
 	border: none;
@@ -117,9 +117,17 @@ footer {
 	margin-left: 1rem;
 	margin-right: 1rem;
 	width: 35%;
-	height: 35vh;
+	height: 40vw;
 	background-color: $primary;
 	box-shadow: 0px 0px 10px black;
+	@media screen and (min-width: 768px) {
+		margin-left: 2rem;
+		margin-right: 2rem;
+	}
+	@media screen and (min-width: 1200px) {
+		margin-left: 3rem;
+		margin-right: 3rem;
+	}
 	a {
 		display: flex;
 		flex-direction: column;
