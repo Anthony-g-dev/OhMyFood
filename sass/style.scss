@@ -82,6 +82,10 @@ header {
 	text-align: center;
 }
 
+ul {
+	list-style-type: none;
+}
+
 h1 {
 	color: $secondary;
 	font-size: 2rem;
@@ -146,7 +150,8 @@ footer {
 	justify-content: center;
 }
 
-.menu {
+// Menu Items
+.menu_card {
 	margin-bottom: 1.2rem;
 	margin-left: 0.6rem;
 	margin-right: 0.6rem;
@@ -154,19 +159,22 @@ footer {
 	height: 60vw;
 	background-color: $primary;
 	box-shadow: 0px 0px 10px 2px lightgrey;
-	a {
+	overflow: hidden;
+	.container {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		width: 100%;
 		height: 100%;
+		transition: transform 400ms, opacity 400ms;
 	}
 	p, i {
-		font-size: 1rem;
+		font-size: 0.8rem;
 	}
 	h2 {
-		margin-top: 0.7rem;
+		font-family: "Segoe Print", arial;
+		margin-top: 1.5rem;
 	}
 	&:nth-child(1) {
 		background-color: #FCDFDB;
@@ -191,14 +199,33 @@ footer {
 			-webkit-text-fill-color: transparent;
 		}
 		h2 {
+			font-family: 'Cantata One', arial;
 			color: #C77412;
 		}
 	}
 	&:nth-child(3) {
 		background-color: #F9F9F9;
+		p {
+			font-family: 'Dancing Script', arial;
+			background: linear-gradient(to right, #0431DF 40%, #0887FB 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+		h2 {
+			color: #0887FB;
+		}
 	}
 	&:nth-child(4) {
 		background-color: #FDFFFC;
+		p {
+			font-family: 'Kaushan Script', arial;
+			background: linear-gradient(to right bottom, #4C9F42 0%, #BFFF7E 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+		h2 {
+			color: #8BD363;
+		}
 	}
 	@media screen and (min-width: 768px) {
 		margin-bottom: 4rem;
@@ -206,10 +233,22 @@ footer {
 		margin-right: 2rem;
 		flex: 0 0 calc(50% - 4rem);
 		p, i {
-			font-size: 2rem;
+			font-size: 1.6rem;
 		}
 		h2 {
 			font-size: 3rem;
+		}
+	}
+	@media screen and (min-width: 992px) {
+		margin-bottom: 5rem;
+		margin-left: 2.5rem;
+		margin-right: 2.5rem;
+		flex: 0 0 calc(50% - 5rem);
+		p, i {
+			font-size: 2.4rem;
+		}
+		h2 {
+			font-size: 4.5rem;
 		}
 	}
 	@media screen and (min-width: 1200px) {
@@ -218,11 +257,15 @@ footer {
 		margin-right: 3rem;
 		flex: 0 0 calc(50% - 6rem);
 		p, i {
-			font-size: 3.5rem;
+			font-size: 3.2rem;
 		}
 		h2 {
 			font-size: 6rem;
 		}
+	}
+	&:hover .container {
+		transform: scale(1.25);
+		opacity: 0.5;
 	}
 }
 
@@ -253,4 +296,97 @@ footer {
 
 #contact ul li {
 	margin-left: 1rem;
+}
+
+// Menu One
+
+.menu {
+	margin: 0 0.6rem;
+	padding: 1.5rem;
+	flex: 0 0 calc(100% - 1.2rem);
+	height: 60vw;
+	box-shadow: 0px 0px 10px 2px lightgrey;
+	overflow: hidden;
+	&>i {
+		font-size: 2.25rem;
+		background: linear-gradient(to right, #F15861 20%, #F78F6A 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	h3 {
+		font-size: 1.25rem;
+	}
+	h5 {
+		font-size: 1.2rem;
+		i {
+			font-size: 1.7rem;
+			background: linear-gradient(to right, #F15861 20%, #F78F6A 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
+	&__name {
+		font-size: 1.25rem;
+		color: black;
+	}
+	&__part {
+		position: relative;
+		margin-bottom: 1.5rem;
+		display: flex;
+		flex-direction: column;
+		h4 {
+			display: inline-block;
+			margin-bottom: 0.3rem;
+			font-size: 1rem;
+			font-family: "Segoe Print", arial;
+			font-weight: bold;
+			&::after {
+				content: "";
+				opacity: 0;
+				position: absolute;
+				left: calc(50% - 40px);
+				top: 1.6rem;
+				width: 0px;
+				height: 2px;
+				background-color: black;
+				transition: width 400ms;
+			}
+		}
+		&:hover h4::after {
+			opacity: 1;
+			width: 80px;
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		i {
+			font-weight: bold;
+		}
+		p, i {
+			font-family: "Segoe Print", arial;
+			font-size: 0.7rem;
+		}
+	}
+	@media screen and (min-width: 768px) {
+		margin: 0 4.4rem;
+		padding: 3rem;
+	}
+}
+
+#menu {
+	&One {
+		background-color: #FCDFDB;	
+	}
+	&Two {
+		background-color: #FFF4FE;
+	}
+	&Three {
+		background-color: #F9F9F9;
+	}
+	&Four {
+		background-color: #FDFFFC;
+	}
 }

@@ -99,6 +99,10 @@ header {
   text-align: center;
 }
 
+ul {
+  list-style-type: none;
+}
+
 h1 {
   color: #fcca46;
   font-size: 2rem;
@@ -161,7 +165,7 @@ footer {
   justify-content: center;
 }
 
-.menu {
+.menu_card {
   margin-bottom: 1.2rem;
   margin-left: 0.6rem;
   margin-right: 0.6rem;
@@ -169,80 +173,120 @@ footer {
   height: 60vw;
   background-color: #569c87;
   box-shadow: 0px 0px 10px 2px lightgrey;
+  overflow: hidden;
 }
-.menu a {
+.menu_card .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
+  transition: transform 400ms, opacity 400ms;
 }
-.menu p, .menu i {
-  font-size: 1rem;
+.menu_card p, .menu_card i {
+  font-size: 0.8rem;
 }
-.menu h2 {
-  margin-top: 0.7rem;
+.menu_card h2 {
+  font-family: "Segoe Print", arial;
+  margin-top: 1.5rem;
 }
-.menu:nth-child(1) {
+.menu_card:nth-child(1) {
   background-color: #FCDFDB;
 }
-.menu:nth-child(1) i {
+.menu_card:nth-child(1) i {
   background: linear-gradient(to right, #F15861 20%, #F78F6A 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.menu:nth-child(1) p {
+.menu_card:nth-child(1) p {
   font-family: "Devonshire", arial;
 }
-.menu:nth-child(1) p, .menu:nth-child(1) h2 {
+.menu_card:nth-child(1) p, .menu_card:nth-child(1) h2 {
   color: #3C1218;
 }
-.menu:nth-child(2) {
+.menu_card:nth-child(2) {
   background-color: #FFF4FE;
 }
-.menu:nth-child(2) p {
+.menu_card:nth-child(2) p {
   font-family: "Playball", arial;
   background: linear-gradient(to right bottom, #C77412 40%, #905BFD 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.menu:nth-child(2) h2 {
+.menu_card:nth-child(2) h2 {
+  font-family: "Cantata One", arial;
   color: #C77412;
 }
-.menu:nth-child(3) {
+.menu_card:nth-child(3) {
   background-color: #F9F9F9;
 }
-.menu:nth-child(4) {
+.menu_card:nth-child(3) p {
+  font-family: "Dancing Script", arial;
+  background: linear-gradient(to right, #0431DF 40%, #0887FB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu_card:nth-child(3) h2 {
+  color: #0887FB;
+}
+.menu_card:nth-child(4) {
   background-color: #FDFFFC;
 }
+.menu_card:nth-child(4) p {
+  font-family: "Kaushan Script", arial;
+  background: linear-gradient(to right bottom, #4C9F42 0%, #BFFF7E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu_card:nth-child(4) h2 {
+  color: #8BD363;
+}
 @media screen and (min-width: 768px) {
-  .menu {
+  .menu_card {
     margin-bottom: 4rem;
     margin-left: 2rem;
     margin-right: 2rem;
     flex: 0 0 calc(50% - 4rem);
   }
-  .menu p, .menu i {
-    font-size: 2rem;
+  .menu_card p, .menu_card i {
+    font-size: 1.6rem;
   }
-  .menu h2 {
+  .menu_card h2 {
     font-size: 3rem;
   }
 }
+@media screen and (min-width: 992px) {
+  .menu_card {
+    margin-bottom: 5rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    flex: 0 0 calc(50% - 5rem);
+  }
+  .menu_card p, .menu_card i {
+    font-size: 2.4rem;
+  }
+  .menu_card h2 {
+    font-size: 4.5rem;
+  }
+}
 @media screen and (min-width: 1200px) {
-  .menu {
+  .menu_card {
     margin-bottom: 6rem;
     margin-left: 3rem;
     margin-right: 3rem;
     flex: 0 0 calc(50% - 6rem);
   }
-  .menu p, .menu i {
-    font-size: 3.5rem;
+  .menu_card p, .menu_card i {
+    font-size: 3.2rem;
   }
-  .menu h2 {
+  .menu_card h2 {
     font-size: 6rem;
   }
+}
+.menu_card:hover .container {
+  transform: scale(1.25);
+  opacity: 0.5;
 }
 
 #soon {
@@ -270,4 +314,94 @@ footer {
 
 #contact ul li {
   margin-left: 1rem;
+}
+
+.menu {
+  margin: 0 0.6rem;
+  padding: 1.5rem;
+  flex: 0 0 calc(100% - 1.2rem);
+  height: 60vw;
+  box-shadow: 0px 0px 10px 2px lightgrey;
+  overflow: hidden;
+}
+.menu > i {
+  font-size: 2.25rem;
+  background: linear-gradient(to right, #F15861 20%, #F78F6A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu h3 {
+  font-size: 1.25rem;
+}
+.menu h5 {
+  font-size: 1.2rem;
+}
+.menu h5 i {
+  font-size: 1.7rem;
+  background: linear-gradient(to right, #F15861 20%, #F78F6A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu__name {
+  font-size: 1.25rem;
+  color: black;
+}
+.menu__part {
+  position: relative;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.menu__part h4 {
+  display: inline-block;
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+  font-family: "Segoe Print", arial;
+  font-weight: bold;
+}
+.menu__part h4::after {
+  content: "";
+  opacity: 0;
+  position: absolute;
+  left: calc(50% - 40px);
+  top: 1.6rem;
+  width: 0px;
+  height: 2px;
+  background-color: black;
+  transition: width 400ms;
+}
+.menu__part:hover h4::after {
+  opacity: 1;
+  width: 80px;
+}
+.menu__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.menu__item i {
+  font-weight: bold;
+}
+.menu__item p, .menu__item i {
+  font-family: "Segoe Print", arial;
+  font-size: 0.7rem;
+}
+@media screen and (min-width: 768px) {
+  .menu {
+    margin: 0 4.4rem;
+    padding: 3rem;
+  }
+}
+
+#menuOne {
+  background-color: #FCDFDB;
+}
+#menuTwo {
+  background-color: #FFF4FE;
+}
+#menuThree {
+  background-color: #F9F9F9;
+}
+#menuFour {
+  background-color: #FDFFFC;
 }
