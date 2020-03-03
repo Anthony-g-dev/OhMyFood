@@ -161,14 +161,20 @@ footer {
 
 #menu_container {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  #menu_container {
+    flex-direction: row;
+  }
 }
 
 .menu_card {
   margin-bottom: 1.2rem;
-  margin-left: 0.6rem;
-  margin-right: 0.6rem;
+  margin-left: 2.4rem;
+  margin-right: 2.4rem;
   flex: 0 0 calc(50% - 1.2rem);
   height: 60vw;
   background-color: #569c87;
@@ -295,20 +301,19 @@ footer {
   align-items: center;
   justify-content: center;
 }
-
-#dots_container span {
+#soon span {
+  margin-left: 0.3rem;
   display: inline-block;
-  margin: 0.5rem 0.5rem;
-  min-width: 1rem;
-  min-height: 1rem;
+  min-width: 0.2rem;
+  min-height: 0.2rem;
   border-radius: 50%;
-  background-color: #569c87;
+  background-color: #fcca46;
   animation: dots 2s infinite ease-in-out;
 }
-#dots_container span:nth-child(2) {
+#soon span:nth-child(2) {
   animation-delay: 400ms;
 }
-#dots_container span:nth-child(3) {
+#soon span:nth-child(3) {
   animation-delay: 800ms;
 }
 
