@@ -61,7 +61,7 @@ $colors: ("primary": $primary, "secondary": $secondary, "white": #ffffff, "black
 	max-width: 100%;
 	color: #000000;
 	text-decoration: none;
-	font-family: 'Roboto', 'Arial', sans-serif;
+	font-family: 'Roboto', 'arial', sans-serif;
 	font-weight: 400;
 	font-size: 1rem;
 }
@@ -177,7 +177,7 @@ footer {
 		font-size: 0.8rem;
 	}
 	h2 {
-		font-family: "Segoe Print", arial;
+		font-family: "Segoe Print", 'arial', sans-serif;
 		margin-top: 1.5rem;
 	}
 	&:nth-child(1) {
@@ -188,7 +188,7 @@ footer {
 			-webkit-text-fill-color: transparent;
 		}
 		p {
-			font-family: 'Devonshire', arial;
+			font-family: 'Devonshire', 'arial', sans-serif;
 		}
 		p, h2 {
 			color: #3C1218;
@@ -197,20 +197,20 @@ footer {
 	&:nth-child(2) {
 		background-color: #FFF4FE;
 		p {
-			font-family: 'Playball', arial;
+			font-family: 'Playball', 'arial', sans-serif;
 			background: linear-gradient(to right bottom, #C77412 40%, #905BFD 100%);
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
 		}
 		h2 {
-			font-family: 'Cantata One', arial;
+			font-family: 'Cantata One', 'arial', sans-serif;
 			color: #C77412;
 		}
 	}
 	&:nth-child(3) {
 		background-color: #F9F9F9;
 		p {
-			font-family: 'Dancing Script', arial;
+			font-family: 'Dancing Script', 'arial', sans-serif;
 			background: linear-gradient(to right, #0431DF 40%, #0887FB 100%);
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
@@ -222,7 +222,7 @@ footer {
 	&:nth-child(4) {
 		background-color: #FDFFFC;
 		p {
-			font-family: 'Kaushan Script', arial;
+			font-family: 'Kaushan Script', 'arial', sans-serif;
 			background: linear-gradient(to right bottom, #4C9F42 0%, #BFFF7E 100%);
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
@@ -267,9 +267,11 @@ footer {
 			font-size: 6rem;
 		}
 	}
-	&:hover .container {
-		transform: scale(1.25);
+	&:hover {
 		opacity: 0.5;
+		.container {
+			transform: scale(1.25);
+		}
 	}
 }
 
@@ -318,7 +320,7 @@ footer {
 		font-size: 1.25rem;
 	}
 	h5 {
-		font-size: 1.2rem;
+		font-size: 0.6rem;
 		i {
 			font-size: 1.7rem;
 			background: linear-gradient(to right, #F15861 20%, #F78F6A 100%);
@@ -331,22 +333,22 @@ footer {
 		color: black;
 	}
 	&__part {
-		position: relative;
 		margin-bottom: 1.5rem;
 		display: flex;
 		flex-direction: column;
 		h4 {
-			display: inline-block;
+			position: relative;
+			margin: auto;
 			margin-bottom: 0.3rem;
-			font-size: 1rem;
-			font-family: "Segoe Print", arial;
+			font-size: 0.6rem;
+			font-family: "Segoe Print", 'arial', sans-serif;
 			font-weight: bold;
 			&::after {
 				content: "";
 				opacity: 0;
 				position: absolute;
-				left: calc(50% - 40px);
-				top: 1.6rem;
+				left: 0;
+				top: 1.8rem;
 				width: 0px;
 				height: 2px;
 				background-color: black;
@@ -355,7 +357,7 @@ footer {
 		}
 		&:hover h4::after {
 			opacity: 1;
-			width: 80px;
+			width: 100%;
 		}
 	}
 
@@ -367,22 +369,88 @@ footer {
 			font-weight: bold;
 		}
 		p, i {
-			font-family: "Segoe Print", arial;
-			font-size: 0.7rem;
+			font-family: "Segoe Print", 'arial', sans-serif;
+			font-size: 0.4rem;
 		}
 	}
 	@media screen and (min-width: 768px) {
 		margin: 0 4.4rem;
 		padding: 3rem;
+		&__item {
+			p, i {
+				font-size: 0.8rem;
+			}
+		}
+		&__part {
+			h4 {
+				font-size: 0.9rem;
+			}
+		}
+		h3 {
+			font-size: 1.9rem;
+		}
+		h5 {
+			font-size: 0.9rem;
+		}
+	}
+	@media screen and (min-width: 992px) {
+		&__item {
+			p, i {
+				font-size: 1rem;
+			}
+		}
+		&__part {
+			h4 {
+				font-size: 1.2rem;
+			}
+		}
+		h3 {
+			font-size: 2.5rem;
+		}
+		h5 {
+			font-size: 1.2rem;
+		}
 	}
 }
 
 #menu {
 	&One {
-		background-color: #FCDFDB;	
+		background-color: #FCDFDB;
+		h3, h5 {
+			font-family: 'Devonshire', 'arial', sans-serif;
+		}	
 	}
 	&Two {
 		background-color: #FFF4FE;
+		h3 {
+			font-family: 'Playball', 'arial', sans-serif;
+			background: linear-gradient(to right, #C77412 30%, #905BFD 60%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+		h4 {
+			font-family: 'Cantata One', 'arial', sans-serif;
+		}
+		#partOne {
+			h4, p, i {
+				color: #C67412;
+			}
+		}
+		#partTwo {
+			h4, p, i {
+				color: #A56799;
+			}
+		}
+		#partThree {
+			h4, p, i {
+				color: #6E4CCC;
+			}
+		}
+		.menu__item {
+			p, i {
+				font-family: 'Cantata One', 'arial', sans-serif;
+			}
+		}
 	}
 	&Three {
 		background-color: #F9F9F9;
