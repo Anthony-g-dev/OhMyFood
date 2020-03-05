@@ -341,7 +341,7 @@ footer {
   font-size: 1.25rem;
 }
 .menu h5 {
-  font-size: 0.6rem;
+  font-size: 1rem;
 }
 .menu h5 i {
   font-size: 1.7rem;
@@ -361,7 +361,7 @@ footer {
 .menu__part h4 {
   position: relative;
   margin: auto;
-  margin-bottom: 0.3rem;
+  margin-bottom: 1rem;
   font-size: 0.6rem;
   font-family: "Segoe Print", "arial", sans-serif;
   font-weight: bold;
@@ -371,7 +371,7 @@ footer {
   opacity: 0;
   position: absolute;
   left: 0;
-  top: 1.8rem;
+  top: 1rem;
   width: 0px;
   height: 2px;
   background-color: black;
@@ -398,31 +398,49 @@ footer {
     margin: 0 4.4rem;
     padding: 3rem;
   }
+  .menu > i {
+    font-size: 2.75rem;
+  }
   .menu__item p, .menu__item i {
     font-size: 0.8rem;
   }
   .menu__part h4 {
     font-size: 0.9rem;
   }
+  .menu__part h4::after {
+    top: 1.5rem;
+  }
   .menu h3 {
     font-size: 1.9rem;
   }
   .menu h5 {
-    font-size: 0.9rem;
+    font-size: 1.6rem;
+  }
+  .menu h5 i {
+    font-size: 2.2rem;
   }
 }
 @media screen and (min-width: 992px) {
+  .menu > i {
+    font-size: 3.25rem;
+  }
   .menu__item p, .menu__item i {
     font-size: 1rem;
   }
   .menu__part h4 {
     font-size: 1.2rem;
   }
+  .menu__part h4::after {
+    top: 2rem;
+  }
   .menu h3 {
     font-size: 2.5rem;
   }
   .menu h5 {
-    font-size: 1.2rem;
+    font-size: 2.2rem;
+  }
+  .menu h5 i {
+    font-size: 2.7rem;
   }
 }
 
@@ -459,6 +477,18 @@ footer {
 #menuThree {
   background-color: #F9F9F9;
 }
+#menuThree h3 {
+  font-family: "Dancing Script", "arial", sans-serif;
+  background: linear-gradient(to right, #0431DF 40%, #0887FB 60%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 #menuFour {
   background-color: #FDFFFC;
+}
+#menuFour h3 {
+  font-family: "Kaushan Script", "arial", sans-serif;
+  background: linear-gradient(to right bottom, #4C9F42 0%, #BFFF7E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
