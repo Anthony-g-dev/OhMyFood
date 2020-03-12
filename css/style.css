@@ -494,11 +494,20 @@ footer {
 #menuTwo #partOne h4, #menuTwo #partOne p, #menuTwo #partOne i {
   color: #C67412;
 }
+#menuTwo #partOne h4::after {
+  background-color: #C67412;
+}
 #menuTwo #partTwo h4, #menuTwo #partTwo p, #menuTwo #partTwo i {
   color: #A56799;
 }
+#menuTwo #partTwo h4::after {
+  background-color: #A56799;
+}
 #menuTwo #partThree h4, #menuTwo #partThree p, #menuTwo #partThree i {
   color: #6E4CCC;
+}
+#menuTwo #partThree h4::after {
+  background-color: #6E4CCC;
 }
 #menuTwo .menu__item p, #menuTwo .menu__item i {
   font-family: "Cantata One", "arial", sans-serif;

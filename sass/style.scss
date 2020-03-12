@@ -480,15 +480,30 @@ footer {
 			h4, p, i {
 				color: #C67412;
 			}
+			h4 {
+				&::after {
+					background-color: #C67412;
+				}
+			}
 		}
 		#partTwo {
 			h4, p, i {
 				color: #A56799;
 			}
+			h4 {
+				&::after {
+					background-color: #A56799;
+				}
+			}
 		}
 		#partThree {
 			h4, p, i {
 				color: #6E4CCC;
+			}
+			h4 {
+				&::after {
+					background-color: #6E4CCC;
+				}
 			}
 		}
 		.menu__item {
