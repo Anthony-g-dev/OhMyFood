@@ -160,7 +160,7 @@ footer {
 	margin-left: 2.4rem;
 	margin-right: 2.4rem;
 	flex: 0 0 calc(50% - 1.2rem);
-	height: 60vw;
+	height: 55vmax;
 	background-color: $primary;
 	box-shadow: 0px 0px 10px 2px lightgrey;
 	overflow: hidden;
@@ -280,6 +280,12 @@ footer {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	a {
+		font-size: 1rem;
+		@media screen and (min-width: 992px) {
+			font-size: 1.5rem;
+		}
+	}
 	span {
 		margin-left: 0.3rem;
 		display: inline-block;
@@ -336,10 +342,22 @@ footer {
 		margin-bottom: 1.5rem;
 		display: flex;
 		flex-direction: column;
+		div.flex_container {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 1rem;
+		}
+		i.decoration {
+			width: 35%;
+			height: 1rem;
+			background-color: #3D1319;
+			border-radius: 30%;
+		}
 		h4 {
 			position: relative;
 			margin: auto;
-			margin-bottom: 1rem;
 			font-size: 0.6rem;
 			font-family: "Segoe Print", 'arial', sans-serif;
 			font-weight: bold;

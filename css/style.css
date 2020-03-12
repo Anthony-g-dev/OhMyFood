@@ -176,7 +176,7 @@ footer {
   margin-left: 2.4rem;
   margin-right: 2.4rem;
   flex: 0 0 calc(50% - 1.2rem);
-  height: 60vw;
+  height: 55vmax;
   background-color: #569c87;
   box-shadow: 0px 0px 10px 2px lightgrey;
   overflow: hidden;
@@ -303,6 +303,14 @@ footer {
   align-items: center;
   justify-content: center;
 }
+#soon a {
+  font-size: 1rem;
+}
+@media screen and (min-width: 992px) {
+  #soon a {
+    font-size: 1.5rem;
+  }
+}
 #soon span {
   margin-left: 0.3rem;
   display: inline-block;
@@ -358,10 +366,22 @@ footer {
   display: flex;
   flex-direction: column;
 }
+.menu__part div.flex_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.menu__part i.decoration {
+  width: 35%;
+  height: 1rem;
+  background-color: #3D1319;
+  border-radius: 30%;
+}
 .menu__part h4 {
   position: relative;
   margin: auto;
-  margin-bottom: 1rem;
   font-size: 0.6rem;
   font-family: "Segoe Print", "arial", sans-serif;
   font-weight: bold;
