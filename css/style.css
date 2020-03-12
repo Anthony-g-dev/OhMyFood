@@ -482,6 +482,15 @@ footer {
 #menuTwo h4 {
   font-family: "Cantata One", "arial", sans-serif;
 }
+#menuTwo i.decoration-1 {
+  background-color: #C67412;
+}
+#menuTwo i.decoration-2 {
+  background-color: #A56799;
+}
+#menuTwo i.decoration-3 {
+  background-color: #6E4CCC;
+}
 #menuTwo #partOne h4, #menuTwo #partOne p, #menuTwo #partOne i {
   color: #C67412;
 }
@@ -503,6 +512,15 @@ footer {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+#menuThree i.decoration-1 {
+  background-color: #0228DD;
+}
+#menuThree i.decoration-2 {
+  background-color: #0670F3;
+}
+#menuThree i.decoration-3 {
+  background-color: #229DF9;
+}
 #menuFour {
   background-color: #FDFFFC;
 }
@@ -511,4 +529,7 @@ footer {
   background: linear-gradient(to right bottom, #4C9F42 0%, #BFFF7E 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+#menuFour i.decoration {
+  background-color: #54A646;
 }
