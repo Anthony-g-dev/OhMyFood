@@ -349,12 +349,6 @@ footer {
 			align-items: center;
 			margin-bottom: 1rem;
 		}
-		i.decoration {
-			width: 35%;
-			height: 1rem;
-			background-color: #3D1319;
-			border-radius: 30%;
-		}
 		h4 {
 			position: relative;
 			margin: auto;
@@ -378,7 +372,6 @@ footer {
 			width: 100%;
 		}
 	}
-
 	&__item {
 		display: flex;
 		flex-direction: row;
@@ -390,6 +383,13 @@ footer {
 			font-family: "Segoe Print", 'arial', sans-serif;
 			font-size: 0.4rem;
 		}
+	}
+	.decoration {
+		max-width: 23%;
+	}
+	.deco_r {
+		-webkit-transform: scaleX(-1);
+		transform: scaleX(-1);
 	}
 	@media screen and (min-width: 768px) {
 		margin: 0 4.4rem;

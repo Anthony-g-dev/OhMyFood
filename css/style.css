@@ -373,12 +373,6 @@ footer {
   align-items: center;
   margin-bottom: 1rem;
 }
-.menu__part i.decoration {
-  width: 35%;
-  height: 1rem;
-  background-color: #3D1319;
-  border-radius: 30%;
-}
 .menu__part h4 {
   position: relative;
   margin: auto;
@@ -412,6 +406,13 @@ footer {
 .menu__item p, .menu__item i {
   font-family: "Segoe Print", "arial", sans-serif;
   font-size: 0.4rem;
+}
+.menu .decoration {
+  max-width: 23%;
+}
+.menu .deco_r {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 @media screen and (min-width: 768px) {
   .menu {
