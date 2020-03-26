@@ -385,9 +385,12 @@ footer {
 		}
 	}
 	.decoration {
+		margin-left: auto;
 		max-width: 23%;
 	}
 	.deco_r {
+		margin-left: 0;
+		margin-right: auto;
 		-webkit-transform: scaleX(-1);
 		transform: scaleX(-1);
 	}
@@ -467,15 +470,6 @@ footer {
 		h4 {
 			font-family: 'Cantata One', 'arial', sans-serif;
 		}
-		i.decoration-1 {
-			background-color: #C67412;
-		}
-		i.decoration-2 {
-			background-color: #A56799;
-		}
-		i.decoration-3 {
-			background-color: #6E4CCC;
-		}
 		#partOne {
 			h4, p, i {
 				color: #C67412;
@@ -520,15 +514,6 @@ footer {
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
 		}
-		i.decoration-1 {
-			background-color: #0228DD;
-		}
-		i.decoration-2 {
-			background-color: #0670F3;
-		}
-		i.decoration-3 {
-			background-color: #229DF9;
-		}
 	}
 	&Four {
 		background-color: #FDFFFC;
@@ -537,9 +522,6 @@ footer {
 			background: linear-gradient(to right bottom, #4C9F42 0%, #BFFF7E 100%);
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
-		}
-		i.decoration {
-			background-color: #54A646;
 		}
 	}
 }
